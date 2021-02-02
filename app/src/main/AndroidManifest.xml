@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.hunger_saviour">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Hunger_Saviour"
+        android:usesCleartextTraffic="true"
+        tools:ignore="ExtraText"
+        tools:replace="android:theme">
+        <activity android:name=".RestaurantDetails.FoodDetails5"></activity>
+        <activity android:name=".RestaurantDetails.RestaurantFiveMenus" />
+        <activity android:name=".RestaurantDetails.FoodDetails4" />
+        <activity android:name=".RestaurantDetails.RestaurantFourMenus" />
+        <activity android:name=".RestaurantDetails.FoodDetails3" />
+        <activity android:name=".RestaurantDetails.RestaurantThreeMenus" />
+        <activity android:name=".Cart.CartActivity" />
+        <activity android:name=".RestaurantDetails.FoodDetails2" />
+        <activity android:name=".RestaurantDetails.RestaurantTwoMenus" />
+        <activity android:name=".User.ConfirmFinalOrder" />
+        <activity android:name=".RestaurantDetails.ResturantOneMenus" />
+        <activity android:name=".RestaurantDetails.FoodDetails" />
+        <activity android:name=".User.Rating" />
+        <activity android:name=".Common.LoginSignup.Profile_main" />
+        <activity android:name=".Common.LoginSignup.Menu" />
+        <activity android:name=".Common.LoginSignup.StartUpScreen" />
+        <activity android:name=".User.UserDashboard" />
+        <activity android:name=".Common.LoginSignup.OnBoarding" />
+        <activity android:name=".Common.LoginSignup.ForgotPassword" />
+        <activity android:name=".Common.LoginSignup.SignUp" />
+        <activity android:name=".Common.LoginSignup.Login" />
+        <activity android:name=".Common.LoginSignup.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

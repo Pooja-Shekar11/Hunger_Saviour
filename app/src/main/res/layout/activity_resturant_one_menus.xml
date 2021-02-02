@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RestaurantDetails.ResturantOneMenus">
+    <LinearLayout
+        android:id="@+id/res1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#20B2AA">
+
+        <RelativeLayout
+            android:id="@+id/r11"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#20B2AA"
+            android:layout_alignParentTop="true">
+            <ImageView
+                android:id="@+id/profile_back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="Go_Back"
+                android:padding="5dp"
+                android:src="@drawable/back_buttn" />
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="3dp"
+                android:layout_marginRight="3dp"
+                android:onClick="cart"
+                android:padding="4dp"
+                android:src="@drawable/cart_icon" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/restarantname1"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/crimson_text_bold"
+            android:text="@string/res1"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <RatingBar
+            android:id="@+id/MCDrating"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/mcddescription"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="-1dp"
+            android:layout_marginEnd="127dp"
+            android:layout_marginRight="127dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:numStars="5"
+            android:progressTint="#ffff8800"
+            android:rating="4.5" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="411dp"
+        android:layout_height="617dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="114dp" />
+</LinearLayout>

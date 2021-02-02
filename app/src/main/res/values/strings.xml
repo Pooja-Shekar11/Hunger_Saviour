@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">Hunger_Saviour</string>
+    <string name="retailer_heading">Sign in </string>
+    <string name="retailer_tag_line">We will help you to serve your food by online services!</string>
+    <string name="how_we_work">First time user?<br> Please Sign In.</br></string>
+    <string name="login">LOGIN</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="logo_name">HUNGER SAVIOUR</string>
+    <string name="restaurant_heading">Select food of your choice...</string>
+    <string name="full_name">Full Name</string>
+    <string name="user_name">Username</string>
+    <string name="email">Email</string>
+    <string name="create_account">Create <br> Account</br></string>
+    <string name="ph_no">Phone Number</string>
+    <string name="password_sign">Password</string>
+
+    <string name="forgot_password">Forgot Password</string>
+    <string name="forgot_password_detail">Provide your account email for which you want to reset your password</string>
+    <string name="next_btn">Next</string>
+
+    <string name="password">Enter Password</string>
+    <string name="email_enter"> Enter Email</string>
+
+    <string name="let_get_started">Lets Get Started</string>
+
+    //Titles
+
+    <string name="first_slide_title">Delicious Menu</string>
+    <string name="second_slide_title">Order Now</string>
+    <string name="third_slide_title">Fast Delivery</string>
+    <string name="fourth_slide_title">Enjoy your food</string>
+
+    //Description
+    <string name="first_slide_desc">Right place to search all your favourite dishes from differennt restaurants in one place</string>
+    <string name="second_slide_desc">Enjoy your favourite dishes by ordering </string>
+    <string name="third_slide_desc">Enjoy your food delivered to your door step</string>
+    <string name="fourth_slide_desc">Sit back and enjoy your food ,by ordering online</string>
+
+    //Restaurant Details
+    <string name="res1">Mc Donalds</string>
+    <string name="res2">Dominos</string>
+    <string name="res3">Pizza Hut</string>
+    <string name="res4">Corner House</string>
+    <string name="res5">Paradise Food Court</string>
+
+
+
+    //Pizza Hut menus
+    <string name="phi1">Double Paneer Supreme</string>
+    <string name="phr1">Rs.430</string>
+    <string name="phi2">Veg Exotica</string>
+    <string name="phr2">Rs.220</string>
+    <string name="phi3">Veggie Supreme</string>
+    <string name="phr3">Rs.270</string>
+    <string name="phi4">Country Feast</string>
+    <string name="phr4">Rs.190</string>
+    <string name="phi5">Italian Chicken Feast</string>
+    <string name="phr5">Rs.390</string>
+    <string name="phi6">Chicken Tikka Supreme</string>
+    <string name="phr6">Rs.360</string>
+
+
+    //
+    <string name="shipment">PLEASE FILL YOUR DETAILS FOR SHIPMENT</string>
+    <string name="rating">PLEASE GIVE US A RATING,to serve you better...</string>
+</resources>

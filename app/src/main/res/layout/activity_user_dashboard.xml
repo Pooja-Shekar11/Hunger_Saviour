@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2B2B2B"
+    tools:context=".User.UserDashboard">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/menu" />
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:background="#20B2AA"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/menu_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/menu" />
+
+            <ImageView
+                android:id="@+id/login_signup"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:elevation="6dp"
+                android:onClick="callStartUpScreens"
+                android:padding="2dp"
+                android:src="@drawable/add_missing_place_icon" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#20B2AA">
+
+                    <TextView
+                        android:id="@+id/app_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/crimson_text_bold"
+                        android:text="@string/logo_name"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="10dp"
+                            android:background="@color/white"
+                            android:elevation="8dp">
+
+                            <ImageView
+                                android:layout_width="57dp"
+                                android:layout_height="55dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/maxsafety_icon"
+                                android:onClick="MaxSafety"/>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="MaxSafety"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="10dp"
+                            android:background="@color/white"
+                            android:elevation="8dp">
+
+                            <ImageView
+                                android:layout_width="33dp"
+                                android:layout_height="41dp"
+                                android:layout_centerInParent="true"
+                                android:onClick="PureVeg"
+                                android:src="@drawable/pureveg_icon" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="Pure Veg"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="10dp"
+                            android:background="@color/white"
+                            android:elevation="8dp">
+
+                            <ImageView
+                                android:layout_width="54dp"
+                                android:layout_height="52dp"
+                                android:layout_centerInParent="true"
+                                android:onClick="Pro"
+                                android:src="@drawable/pro_icon" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="Pro"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="10dp"
+                            android:background="@color/white"
+                            android:elevation="8dp">
+
+                            <ImageView
+                                android:layout_width="43dp"
+                                android:layout_height="45dp"
+                                android:layout_centerInParent="true"
+                                android:onClick="Trending"
+                                android:src="@drawable/trending_icon" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="Trending"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp">
+
+                    <TextView
+                        android:id="@+id/RestaurantsName"
+                        android:layout_width="371dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:fontFamily="@font/cabin_sketch_bold"
+                        android:text="@string/restaurant_heading"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="174dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/mcdimage"
+                        android:layout_width="178dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="0dp"
+                        android:src="@drawable/mcd" />
+
+                    <TextView
+                        android:id="@+id/mcdname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="206dp"
+                        android:layout_marginLeft="206dp"
+                        android:layout_marginTop="28dp"
+                        android:text="Mc DONALDS"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/mcddescription"
+                        android:layout_below="@+id/mcdname"
+                        android:layout_width="173dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="206dp"
+                        android:layout_marginLeft="206dp"
+                        android:layout_marginTop="0dp"
+                        android:text="Burgers,wraps and lot more"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <RatingBar
+                        android:id="@+id/mcdrating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mcddescription"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="127dp"
+                        android:layout_marginRight="127dp"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:numStars="5"
+                        android:progressTint="#ffff8800"
+                        android:rating="4.5" />
+
+                    <Button
+                        android:id="@+id/mcdbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="51dp"
+                        android:background="@color/orange"
+                        android:text="View"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="174dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/dominosimage"
+                        android:layout_width="178dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="0dp"
+                        android:src="@drawable/dominos" />
+
+                    <TextView
+                        android:id="@+id/dominosname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="206dp"
+                        android:layout_marginLeft="206dp"
+                        android:layout_marginTop="28dp"
+                        android:text="DOMINOS"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dominosdescription"
+                        android:layout_below="@+id/dominosname"
+                        android:layout_width="173dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="206dp"
+                        android:layout_marginLeft="206dp"
+                        android:layout_marginTop="0dp"
+                        android:text="Your favourite destination for pizzas"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <RatingBar
+                        android:id="@+id/DOMINOSrating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dominosdescription"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="127dp"
+                        android:layout_marginRight="127dp"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:numStars="5"
+                        android:progressTint="#ffff8800"
+                        android:rating="4.5" />
+
+                    <Button
+                        android:id="@+id/dominosbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginBottom="35dp"
+                        android:background="@color/orange"
+                        android:text="View"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/PHimage"
+                        android:layout_width="178dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="0dp"
+                        android:src="@drawable/pizzahut" />
+
+                    <TextView
+                        android:id="@+id/PHname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="207dp"
+                        android:layout_marginLeft="207dp"
+                        android:layout_marginTop="12dp"
+                        android:text="PIZZA HUT"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/PHdescription"
+                        android:layout_width="173dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/PHname"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="206dp"
+                        android:layout_marginLeft="206dp"
+                        android:layout_marginTop="0dp"
+                        android:text="Varities of PIZZAS"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <RatingBar
+                        android:id="@+id/PHrating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/PHdescription"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginEnd="128dp"
+                        android:layout_marginRight="128dp"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:numStars="5"
+                        android:progressTint="#ffff8800"
+                        android:rating="4.5" />
+
+                    <Button
+                        android:id="@+id/PHbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="51dp"
+                        android:background="@color/orange"
+                        android:text="View"
+                        android:textStyle="bold"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/icimage"
+                        android:layout_width="171dp"
+                        android:layout_height="170dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginLeft="22dp"
+                        android:layout_marginBottom="12dp"
+                        android:src="@drawable/icecream" />
+
+                    <TextView
+                        android:id="@+id/icname"
+                        android:layout_width="183dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="201dp"
+                        android:layout_marginLeft="201dp"
+                        android:layout_marginTop="20dp"
+                        android:text="CORNER HOUSE"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/icdescription"
+                        android:layout_width="173dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/icname"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="201dp"
+                        android:layout_marginLeft="201dp"
+                        android:layout_marginTop="-14dp"
+                        android:text="Place for your favourite Ice-Cream"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <RatingBar
+                        android:id="@+id/icrating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/icdescription"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginEnd="128dp"
+                        android:layout_marginRight="128dp"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:numStars="5"
+                        android:progressTint="#ffff8800"
+                        android:rating="3.5" />
+
+                    <Button
+                        android:id="@+id/icbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="35dp"
+                        android:background="@color/orange"
+                        android:text="View"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/paradiseimage"
+                        android:layout_width="171dp"
+                        android:layout_height="170dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginLeft="23dp"
+                        android:layout_marginBottom="14dp"
+                        android:src="@drawable/paradise" />
+
+                    <TextView
+                        android:id="@+id/paradisename"
+                        android:layout_width="192dp"
+                        android:layout_height="45dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="205dp"
+                        android:layout_marginLeft="205dp"
+                        android:layout_marginTop="5dp"
+                        android:text="PARADISE FOOD COURT"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/paradisedescription"
+                        android:layout_width="173dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/paradisename"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="206dp"
+                        android:layout_marginLeft="206dp"
+                        android:layout_marginTop="0dp"
+                        android:text="All variety of dishes"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <RatingBar
+                        android:id="@+id/paradiserating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/paradisedescription"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginEnd="128dp"
+                        android:layout_marginRight="128dp"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:numStars="5"
+                        android:progressTint="#ffff8800"
+                        android:rating="4.5" />
+
+                    <Button
+                        android:id="@+id/paradisebtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="51dp"
+                        android:background="@color/orange"
+                        android:text="View"
+                        android:textStyle="bold"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

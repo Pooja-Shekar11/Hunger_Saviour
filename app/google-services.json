@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "684315623549",
+    "project_id": "hunger-saviour-7e26e",
+    "storage_bucket": "hunger-saviour-7e26e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:684315623549:android:43acddcbcd43641da63114",
+        "android_client_info": {
+          "package_name": "com.example.hunger_saviour"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "684315623549-i6nb1spetoh8ij1ap07di8cufvqf3jnt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_lN01qE9brRXXEfpmhgPo6TFOvKCtMPo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "684315623549-i6nb1spetoh8ij1ap07di8cufvqf3jnt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
